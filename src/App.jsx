@@ -106,7 +106,7 @@ export default function Quiz() {
 
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-          <span style={{ fontSize: 13, fontWeight: 700, color: sc, background: q.sec === "A" ? "#e0f2fe" : "#ede9fe", borderRadius: 99, padding: "4px 12px" }}>
+          <span style={{ fontSize: 13, fontWeight: 700, color: sc, background: q.sec === "A" ? "#601D75" : "#0B33B3", borderRadius: 99, padding: "4px 12px" }}>
             SECTION {q.sec} – {q.sec === "A" ? "Non-calculator" : "Calculator"}
           </span>
           <span style={{ fontSize: 15, color: C.neu }}>Q{current + 1} / {questions.length}</span>
@@ -115,14 +115,14 @@ export default function Quiz() {
         <ProgressBar current={current} total={questions.length} color={sc} />
 
         {questions[current].id === "B1" && (
-          <div style={{ background: "#ede9fe", border: "1px solid #c4b5fd", borderRadius: 8, padding: "9px 14px", fontSize: 14, color: C.b, marginBottom: 14, fontWeight: 600 }}>
+          <div style={{ background: "#0B33B3", border: "1px solid #c4b5fd", borderRadius: 8, padding: "9px 14px", fontSize: 14, color: C.b, marginBottom: 14, fontWeight: 600 }}>
             🧮 Section B starts here — calculator allowed!
           </div>
         )}
 
         {/* Marks badge */}
         <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
-          <span style={{ background: q.sec === "A" ? "#e0f2fe" : "#ede9fe", color: sc, borderRadius: 99, padding: "3px 12px", fontSize: 13, fontWeight: 600 }}>{q.marks} mark{q.marks > 1 ? "s" : ""}</span>
+          <span style={{ background: q.sec === "A" ? "#601D75" : "#0B33B3", color: sc, borderRadius: 99, padding: "3px 12px", fontSize: 13, fontWeight: 600 }}>{q.marks} mark{q.marks > 1 ? "s" : ""}</span>
           <span style={{ color: C.neu, fontSize: 13, lineHeight: "1.8" }}>Question {q.id}</span>
         </div>
         
@@ -156,7 +156,7 @@ export default function Quiz() {
           {!a.submitted ? (
             <>
               <button onClick={handleSubmit} disabled={!canSubmit}
-                style={{ flex: 1, background: sc, color: "#fff", border: "none", borderRadius: 8, padding: "13px", fontSize: 16, fontWeight: 600, cursor: "pointer", opacity: canSubmit ? 1 : 0.4 }}>
+                style={{ flex: 1, background: "#601D75", color: "#fff", border: "none", borderRadius: 8, padding: "13px", fontSize: 16, fontWeight: 600, cursor: "pointer", opacity: canSubmit ? 1 : 0.4 }}>
                 Submit Answer
               </button>
               <button onClick={skip}
@@ -168,12 +168,12 @@ export default function Quiz() {
             <>
               {!a.correct && (
                 <button onClick={retry}
-                  style={{ flex: 1, background: "#fff", color: sc, border: `2px solid ${sc}`, borderRadius: 8, padding: "13px", fontSize: 15, fontWeight: 600, cursor: "pointer" }}>
+                  style={{ flex: 1, background: "#601D75", color: sc, border: `2px solid ${sc}`, borderRadius: 8, padding: "13px", fontSize: 15, fontWeight: 600, cursor: "pointer" }}>
                   Try Again
                 </button>
               )}
               <button onClick={goNext}
-                style={{ flex: 1, background: sc, color: "#fff", border: "none", borderRadius: 8, padding: "13px", fontSize: 16, fontWeight: 600, cursor: "pointer" }}>
+                style={{ flex: 1, background: sc, color: "#333", border: "none", borderRadius: 8, padding: "13px", fontSize: 16, fontWeight: 600, cursor: "pointer" }}>
                 {current + 1 >= questions.length ? "Finish Quiz →" : "Next →"}
               </button>
             </>

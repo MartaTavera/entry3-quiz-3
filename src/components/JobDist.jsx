@@ -1,5 +1,5 @@
 export function JobDist() {
-    const items = [{ name: "Job A", dist: "152 Km", from:"from her home" }, { name: "Job B", dist: "154 Km ", from:"from her home" },{ name: "Job C", dist:"148 Km ", from:"from her home" }];
+    const items = [{ name: "Cassie", dist: "MOT", from:"10:30" }, { name: "JAli", dist: "154 tyres ", from:"8:45" },{ name: "Bill C", dist:"148 service ", from:"13:15" }];
     return (
       <div style={{ display: "flex", gap: 16, marginBottom: 20 }}>
         {items.map(h => (

@@ -47,12 +47,24 @@ export function QuestionInput({ q, a, onUpdate, onSubmit, canSubmit }) {
   if (q.type === "choice") {
     const sc = q.sec === "A" ? C.a : C.b;
     return (
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 100, marginBottom: 18 }}>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 50, marginBottom: 18 }}>
         {q.options.map(opt => (
           <button key={opt} onClick={() => upd({ selected: opt })}
-            style={{ padding: "12px 16px", border: `2px solid ${a.selected === opt ? sc : C.bdr}`, borderRadius: 8, background: a.selected === opt ? (q.sec === "A" ? "#e0f2fe" : "#ede9fe") : "#fff", color: a.selected === opt ? sc : "#334155", fontSize: 16, cursor: "pointer", textAlign: "left", fontWeight: a.selected === opt ? 600 : 400, transition: "all 0.12s" }}>
-            {opt}
-          </button>
+          style={{ 
+            padding: "12px 16px", 
+            border: `2px solid ${a.selected === opt ? sc : C.bdr}`, 
+            borderRadius: 8, 
+            background: a.selected === opt ? (q.sec === "A" ? "#e0f2fe" : "#ede9fe") : "#fff", 
+            color: a.selected === opt ? sc : "#334155", 
+            fontSize: 16, 
+            cursor: "pointer", 
+            textAlign: "center",
+            fontWeight: a.selected === opt ? 600 : 400, 
+            transition: "all 0.12s",
+            whiteSpace: "nowrap"  // ADD THIS
+          }}>
+          {opt}
+        </button>
         ))}
       </div>
     );
