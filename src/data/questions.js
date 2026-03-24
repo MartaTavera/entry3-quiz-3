@@ -154,7 +154,7 @@ export const questions = [
     hint: "Count the lines of symmetry in each nut.",
     options: ["A", "B", "C", "D"],
     answer: "D", displayAnswer: "D",
-    explanation: "Nut B has 5 lines of symmetry.",
+    explanation: "Nut D has 5 lines of symmetry.",
   },
 
   {
@@ -229,5 +229,16 @@ export const questions = [
     displayAnswer: "38 new diesel, 74 used diesel (difference = 36, not 33)",
     explanation: "From the chart: new diesel ≈ 38, used diesel ≈ 74. Difference = 36, so Vikram is incorrect.",
   },
-
+ 
+  {
+    id: "B19", sec: "B", marks: 3, type: "twotext",
+    image: "B_Q19.png", imgSrc: "images/B_Q19.png",
+    preText: "The image below shows the direction of wind in Manchester",
+    text: "VWhat direction is this?.",
+    hint: "* point compass, choose from: North, North east, North west, West, South, Souths West, South east, East",
+    labels: ["new diesel cars", "used diesel cars"],
+    answer: ["North", "east"],  // or whatever the correct numbers are from your chart
+    displayAnswer: "North east",
+    explanation: "North east",
+  }
 ];
