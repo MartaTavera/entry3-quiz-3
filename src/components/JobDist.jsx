@@ -1,5 +1,5 @@
 export function JobDist() {
-    const items = [{ name: "Cassie", dist: "MOT", from:"10:30" }, { name: "JAli", dist: "154 tyres ", from:"8:45" },{ name: "Bill C", dist:"148 service ", from:"13:15" }];
+    const items = [{ name: "Cassie", dist: "MOT", from:"10:30" }, { name: "Ali", dist: "tyres ", from:"8:45" },{ name: "Bill C", dist:"service ", from:"13:15" }];
     return (
       <div style={{ display: "flex", gap: 16, marginBottom: 20 }}>
         {items.map(h => (
